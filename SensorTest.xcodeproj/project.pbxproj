@@ -21,6 +21,7 @@
 		0A5A19A2156D8668008C9BA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A5A19A0156D8668008C9BA4 /* InfoPlist.strings */; };
 		0A5A19A5156D8668008C9BA4 /* SensorTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A19A4156D8668008C9BA4 /* SensorTestTests.m */; };
 		0A5A19B2156D8717008C9BA4 /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A19B1156D8717008C9BA4 /* STViewController.m */; };
+		0A5A19B6156D8E5B008C9BA4 /* STModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A19B5156D8E5B008C9BA4 /* STModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		0A5A19A4156D8668008C9BA4 /* SensorTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorTestTests.m; sourceTree = "<group>"; };
 		0A5A19B0156D8717008C9BA4 /* STViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
 		0A5A19B1156D8717008C9BA4 /* STViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
+		0A5A19B4156D8E5B008C9BA4 /* STModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STModel.h; sourceTree = "<group>"; };
+		0A5A19B5156D8E5B008C9BA4 /* STModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,7 @@
 		0A5A19AE156D8717008C9BA4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0A5A19B3156D8E4F008C9BA4 /* Models */,
 				0A5A19AF156D8717008C9BA4 /* Controllers */,
 			);
 			path = Classes;
@@ -168,6 +172,15 @@
 				0A5A19B1156D8717008C9BA4 /* STViewController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0A5A19B3156D8E4F008C9BA4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A5A19B4156D8E5B008C9BA4 /* STModel.h */,
+				0A5A19B5156D8E5B008C9BA4 /* STModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +294,7 @@
 				0A5A1983156D8667008C9BA4 /* main.m in Sources */,
 				0A5A1987156D8667008C9BA4 /* STAppDelegate.m in Sources */,
 				0A5A19B2156D8717008C9BA4 /* STViewController.m in Sources */,
+				0A5A19B6156D8E5B008C9BA4 /* STModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
