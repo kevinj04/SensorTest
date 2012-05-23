@@ -15,12 +15,12 @@
 		0A5A1987156D8667008C9BA4 /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A1986156D8667008C9BA4 /* STAppDelegate.m */; };
 		0A5A198A156D8667008C9BA4 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5A1988156D8667008C9BA4 /* MainStoryboard_iPhone.storyboard */; };
 		0A5A198D156D8667008C9BA4 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5A198B156D8667008C9BA4 /* MainStoryboard_iPad.storyboard */; };
-		0A5A1990156D8667008C9BA4 /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A198F156D8667008C9BA4 /* STViewController.m */; };
 		0A5A1998156D8668008C9BA4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5A1997156D8667008C9BA4 /* SenTestingKit.framework */; };
 		0A5A1999156D8668008C9BA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5A1976156D8667008C9BA4 /* UIKit.framework */; };
 		0A5A199A156D8668008C9BA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5A1978156D8667008C9BA4 /* Foundation.framework */; };
 		0A5A19A2156D8668008C9BA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A5A19A0156D8668008C9BA4 /* InfoPlist.strings */; };
 		0A5A19A5156D8668008C9BA4 /* SensorTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A19A4156D8668008C9BA4 /* SensorTestTests.m */; };
+		0A5A19B2156D8717008C9BA4 /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A19B1156D8717008C9BA4 /* STViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +38,22 @@
 		0A5A1976156D8667008C9BA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A5A1978156D8667008C9BA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0A5A197A156D8667008C9BA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0A5A197E156D8667008C9BA4 /* SensorTest-Info.plist */ = {isa = PBXFileReference; path = "SensorTest-Info.plist"; sourceTree = "<group>"; };
+		0A5A197E156D8667008C9BA4 /* SensorTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SensorTest-Info.plist"; sourceTree = "<group>"; };
 		0A5A1980156D8667008C9BA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A5A1982156D8667008C9BA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0A5A1984156D8667008C9BA4 /* SensorTest-Prefix.pch */ = {isa = PBXFileReference; path = "SensorTest-Prefix.pch"; sourceTree = "<group>"; };
-		0A5A1985156D8667008C9BA4 /* STAppDelegate.h */ = {isa = PBXFileReference; path = STAppDelegate.h; sourceTree = "<group>"; };
+		0A5A1984156D8667008C9BA4 /* SensorTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SensorTest-Prefix.pch"; sourceTree = "<group>"; };
+		0A5A1985156D8667008C9BA4 /* STAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAppDelegate.h; sourceTree = "<group>"; };
 		0A5A1986156D8667008C9BA4 /* STAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAppDelegate.m; sourceTree = "<group>"; };
 		0A5A1989156D8667008C9BA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		0A5A198C156D8667008C9BA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		0A5A198E156D8667008C9BA4 /* STViewController.h */ = {isa = PBXFileReference; path = STViewController.h; sourceTree = "<group>"; };
-		0A5A198F156D8667008C9BA4 /* STViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
 		0A5A1996156D8667008C9BA4 /* SensorTestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensorTestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5A1997156D8667008C9BA4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		0A5A199F156D8668008C9BA4 /* SensorTestTests-Info.plist */ = {isa = PBXFileReference; path = "SensorTestTests-Info.plist"; sourceTree = "<group>"; };
+		0A5A199F156D8668008C9BA4 /* SensorTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SensorTestTests-Info.plist"; sourceTree = "<group>"; };
 		0A5A19A1156D8668008C9BA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0A5A19A3156D8668008C9BA4 /* SensorTestTests.h */ = {isa = PBXFileReference; path = SensorTestTests.h; sourceTree = "<group>"; };
+		0A5A19A3156D8668008C9BA4 /* SensorTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensorTestTests.h; sourceTree = "<group>"; };
 		0A5A19A4156D8668008C9BA4 /* SensorTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorTestTests.m; sourceTree = "<group>"; };
+		0A5A19B0156D8717008C9BA4 /* STViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
+		0A5A19B1156D8717008C9BA4 /* STViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,12 +113,11 @@
 		0A5A197C156D8667008C9BA4 /* SensorTest */ = {
 			isa = PBXGroup;
 			children = (
+				0A5A19AE156D8717008C9BA4 /* Classes */,
 				0A5A1985156D8667008C9BA4 /* STAppDelegate.h */,
 				0A5A1986156D8667008C9BA4 /* STAppDelegate.m */,
 				0A5A1988156D8667008C9BA4 /* MainStoryboard_iPhone.storyboard */,
 				0A5A198B156D8667008C9BA4 /* MainStoryboard_iPad.storyboard */,
-				0A5A198E156D8667008C9BA4 /* STViewController.h */,
-				0A5A198F156D8667008C9BA4 /* STViewController.m */,
 				0A5A197D156D8667008C9BA4 /* Supporting Files */,
 			);
 			path = SensorTest;
@@ -152,6 +151,23 @@
 				0A5A19A0156D8668008C9BA4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A5A19AE156D8717008C9BA4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0A5A19AF156D8717008C9BA4 /* Controllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0A5A19AF156D8717008C9BA4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A5A19B0156D8717008C9BA4 /* STViewController.h */,
+				0A5A19B1156D8717008C9BA4 /* STViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +280,7 @@
 			files = (
 				0A5A1983156D8667008C9BA4 /* main.m in Sources */,
 				0A5A1987156D8667008C9BA4 /* STAppDelegate.m in Sources */,
-				0A5A1990156D8667008C9BA4 /* STViewController.m in Sources */,
+				0A5A19B2156D8717008C9BA4 /* STViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
