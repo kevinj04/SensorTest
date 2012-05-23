@@ -14,6 +14,18 @@
 
 @implementation STViewController
 
+@synthesize xAccelerometerLabel = _xAccelerometerLabel;
+@synthesize yAccelerometerLabel = _yAccelerometerLabel;
+@synthesize zAccelerometerLabel = _zAccelerometerLabel;
+
+@synthesize xGyroscopeLabel = _xGyroscopeLabel;
+@synthesize yGyroscopeLabel = _yGyroscopeLabel;
+@synthesize zGyroscopeLabel = _zGyroscopeLabel;
+
+@synthesize xMagnetometerLabel = _xMagnetometerLabel;
+@synthesize yMagnetometerLabel = _yMagnetometerLabel;
+@synthesize zMagnetometerLabel = _zMagnetometerLabel;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
