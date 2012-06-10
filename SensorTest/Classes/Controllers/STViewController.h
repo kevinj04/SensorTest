@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STMotionMagic.h"
 
 @interface STViewController : UIViewController
 
@@ -21,5 +22,8 @@
 @property (strong, retain) IBOutlet UILabel *xMagnetometerLabel;
 @property (strong, retain) IBOutlet UILabel *yMagnetometerLabel;
 @property (strong, retain) IBOutlet UILabel *zMagnetometerLabel;
+
+@property (strong, retain) STMotionMagic *motionMagic;
+@property (strong, retain) STModel *model;
 
 @end

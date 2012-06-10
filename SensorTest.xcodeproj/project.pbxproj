@@ -22,6 +22,8 @@
 		0A5A19A5156D8668008C9BA4 /* SensorTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A19A4156D8668008C9BA4 /* SensorTestTests.m */; };
 		0A5A19B2156D8717008C9BA4 /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A19B1156D8717008C9BA4 /* STViewController.m */; };
 		0A5A19B6156D8E5B008C9BA4 /* STModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A19B5156D8E5B008C9BA4 /* STModel.m */; };
+		0A5A19C3156D9032008C9BA4 /* STMotionMagic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A19C2156D9032008C9BA4 /* STMotionMagic.m */; };
+		0A5A19C5156D9097008C9BA4 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5A19C4156D9097008C9BA4 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,9 @@
 		0A5A19B1156D8717008C9BA4 /* STViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
 		0A5A19B4156D8E5B008C9BA4 /* STModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STModel.h; sourceTree = "<group>"; };
 		0A5A19B5156D8E5B008C9BA4 /* STModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STModel.m; sourceTree = "<group>"; };
+		0A5A19C1156D9032008C9BA4 /* STMotionMagic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMotionMagic.h; sourceTree = "<group>"; };
+		0A5A19C2156D9032008C9BA4 /* STMotionMagic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMotionMagic.m; sourceTree = "<group>"; };
+		0A5A19C4156D9097008C9BA4 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5A19C5156D9097008C9BA4 /* CoreMotion.framework in Frameworks */,
 				0A5A1977156D8667008C9BA4 /* UIKit.framework in Frameworks */,
 				0A5A1979156D8667008C9BA4 /* Foundation.framework in Frameworks */,
 				0A5A197B156D8667008C9BA4 /* CoreGraphics.framework in Frameworks */,
@@ -105,6 +111,7 @@
 		0A5A1975156D8667008C9BA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A5A19C4156D9097008C9BA4 /* CoreMotion.framework */,
 				0A5A1976156D8667008C9BA4 /* UIKit.framework */,
 				0A5A1978156D8667008C9BA4 /* Foundation.framework */,
 				0A5A197A156D8667008C9BA4 /* CoreGraphics.framework */,
@@ -159,6 +166,7 @@
 		0A5A19AE156D8717008C9BA4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0A5A19BF156D9023008C9BA4 /* Helpers */,
 				0A5A19B3156D8E4F008C9BA4 /* Models */,
 				0A5A19AF156D8717008C9BA4 /* Controllers */,
 			);
@@ -181,6 +189,15 @@
 				0A5A19B5156D8E5B008C9BA4 /* STModel.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0A5A19BF156D9023008C9BA4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0A5A19C1156D9032008C9BA4 /* STMotionMagic.h */,
+				0A5A19C2156D9032008C9BA4 /* STMotionMagic.m */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +312,7 @@
 				0A5A1987156D8667008C9BA4 /* STAppDelegate.m in Sources */,
 				0A5A19B2156D8717008C9BA4 /* STViewController.m in Sources */,
 				0A5A19B6156D8E5B008C9BA4 /* STModel.m in Sources */,
+				0A5A19C3156D9032008C9BA4 /* STMotionMagic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +492,7 @@
 				0A5A19AA156D8668008C9BA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A5A19AB156D8668008C9BA4 /* Build configuration list for PBXNativeTarget "SensorTestTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +501,7 @@
 				0A5A19AD156D8668008C9BA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
