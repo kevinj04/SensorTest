@@ -34,6 +34,8 @@
 @synthesize yMagnetometerLabel = _yMagnetometerLabel;
 @synthesize zMagnetometerLabel = _zMagnetometerLabel;
 
+@synthesize timeLabel = _timeLabel;
+
 @synthesize recordButton = _recordButton;
 @synthesize sendDataButton = _sendDataButton;
 
@@ -112,6 +114,8 @@
     self.xMagnetometerLabel.text = [NSString stringWithFormat:@"%f", dataPoint.xMagnetometerValue];
     self.yMagnetometerLabel.text = [NSString stringWithFormat:@"%f", dataPoint.yMagnetometerValue];
     self.zMagnetometerLabel.text = [NSString stringWithFormat:@"%f", dataPoint.zMagnetometerValue];
+
+    self.timeLabel.text = [NSString stringWithFormat:@"Time:  %.3f", dataPoint.timePoint];
 }
 
 - (void) update:(double) dt
@@ -139,6 +143,7 @@
         // TODO: [self.model reset];
         [self.recordButton setTitle:[NSString stringWithString:@"Stop Recording"] forState:UIControlStateNormal];
         [self.sendDataButton setEnabled:NO];
+        self.model = nil;
         [self setupModel]; // new model
         self.isRecording = YES;
         [self.motionMagic startSensing];

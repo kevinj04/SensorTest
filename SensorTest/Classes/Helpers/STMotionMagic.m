@@ -78,6 +78,8 @@
 
 - (void) startSensing
 {
+    self.lastTimeStamp = 0.0;
+    self.cumulativeTime = 0.0;
     [self.motionManager startAccelerometerUpdates];
     [self.motionManager startGyroUpdates];
     [self.motionManager startMagnetometerUpdates];

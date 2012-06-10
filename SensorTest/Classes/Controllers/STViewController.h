@@ -23,6 +23,8 @@
 @property (strong, retain) IBOutlet UILabel *yMagnetometerLabel;
 @property (strong, retain) IBOutlet UILabel *zMagnetometerLabel;
 
+@property (strong, retain) IBOutlet UILabel *timeLabel;
+
 @property (strong, retain) IBOutlet UIButton *recordButton;
 @property (strong, retain) IBOutlet UIButton *sendDataButton;
 
