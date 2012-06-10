@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A1661BD15851C0500A3C87B /* STDataPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1661BC15851C0500A3C87B /* STDataPointModel.m */; };
+		0A1661C015851D4E00A3C87B /* STRecordingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1661BF15851D4E00A3C87B /* STRecordingModel.m */; };
 		0A5A1977156D8667008C9BA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5A1976156D8667008C9BA4 /* UIKit.framework */; };
 		0A5A1979156D8667008C9BA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5A1978156D8667008C9BA4 /* Foundation.framework */; };
 		0A5A197B156D8667008C9BA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5A197A156D8667008C9BA4 /* CoreGraphics.framework */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		0A1661BB15851C0500A3C87B /* STDataPointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDataPointModel.h; sourceTree = "<group>"; };
 		0A1661BC15851C0500A3C87B /* STDataPointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDataPointModel.m; sourceTree = "<group>"; };
+		0A1661BE15851D4D00A3C87B /* STRecordingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRecordingModel.h; sourceTree = "<group>"; };
+		0A1661BF15851D4E00A3C87B /* STRecordingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRecordingModel.m; sourceTree = "<group>"; };
 		0A5A1972156D8667008C9BA4 /* SensorTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5A1976156D8667008C9BA4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A5A1978156D8667008C9BA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -187,6 +190,8 @@
 			children = (
 				0A1661BB15851C0500A3C87B /* STDataPointModel.h */,
 				0A1661BC15851C0500A3C87B /* STDataPointModel.m */,
+				0A1661BE15851D4D00A3C87B /* STRecordingModel.h */,
+				0A1661BF15851D4E00A3C87B /* STRecordingModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 			attributes = {
 				CLASSPREFIX = ST;
 				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = somethingpointless;
 			};
 			buildConfigurationList = 0A5A196C156D8667008C9BA4 /* Build configuration list for PBXProject "SensorTest" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -313,6 +319,7 @@
 				0A5A19B2156D8717008C9BA4 /* STViewController.m in Sources */,
 				0A5A19C3156D9032008C9BA4 /* STMotionMagic.m in Sources */,
 				0A1661BD15851C0500A3C87B /* STDataPointModel.m in Sources */,
+				0A1661C015851D4E00A3C87B /* STRecordingModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

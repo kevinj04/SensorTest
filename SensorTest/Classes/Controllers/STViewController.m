@@ -3,12 +3,17 @@
 //  SensorTest
 //
 //  Created by Kevin Jenkins on 5/23/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 somethingpointless. All rights reserved.
 //
 
 #import "STViewController.h"
+#import "STMotionMagic.h"
+#import "STRecordingModel.h"
 
 @interface STViewController ()
+
+@property (strong, retain) STMotionMagic *motionMagic;
+@property (strong, retain) STRecordingModel *model;
 
 @property (strong, retain) NSTimer *timer;
 @property (nonatomic, assign) BOOL isRecording;
@@ -46,7 +51,7 @@
 
 - (void) setupModel
 {
-    self.model = [[STDataPointModel alloc] init];
+    self.model = [[STRecordingModel alloc] init];
 }
 
 - (void)setupViewState
@@ -56,7 +61,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
     [self setupViewState];
     [self setupMotionMagic];
     [self setupModel];
@@ -94,22 +99,26 @@
     self.timer = nil;
 }
 
+- (void) updateViewWithDataPoint:(STDataPointModel *) dataPoint
+{
+    self.xAccelerometerLabel.text = [NSString stringWithFormat:@"%f", dataPoint.xAccelerometerValue];
+    self.yAccelerometerLabel.text = [NSString stringWithFormat:@"%f", dataPoint.yAccelerometerValue];
+    self.zAccelerometerLabel.text = [NSString stringWithFormat:@"%f", dataPoint.zAccelerometerValue];
+
+    self.xGyroscopeLabel.text = [NSString stringWithFormat:@"%f", dataPoint.xGyroscopeValue];
+    self.yGyroscopeLabel.text = [NSString stringWithFormat:@"%f", dataPoint.yGyroscopeValue];
+    self.zGyroscopeLabel.text = [NSString stringWithFormat:@"%f", dataPoint.zGyroscopeValue];
+
+    self.xMagnetometerLabel.text = [NSString stringWithFormat:@"%f", dataPoint.xMagnetometerValue];
+    self.yMagnetometerLabel.text = [NSString stringWithFormat:@"%f", dataPoint.yMagnetometerValue];
+    self.zMagnetometerLabel.text = [NSString stringWithFormat:@"%f", dataPoint.zMagnetometerValue];
+}
+
 - (void) update:(double) dt
 {
-    [self.motionMagic updateModel:self.model];
-
-    self.xAccelerometerLabel.text = [NSString stringWithFormat:@"%f", self.model.xAccelerometerValue];
-    self.yAccelerometerLabel.text = [NSString stringWithFormat:@"%f", self.model.yAccelerometerValue];
-    self.zAccelerometerLabel.text = [NSString stringWithFormat:@"%f", self.model.zAccelerometerValue];
-
-    self.xGyroscopeLabel.text = [NSString stringWithFormat:@"%f", self.model.xGyroscopeValue];
-    self.yGyroscopeLabel.text = [NSString stringWithFormat:@"%f", self.model.yGyroscopeValue];
-    self.zGyroscopeLabel.text = [NSString stringWithFormat:@"%f", self.model.zGyroscopeValue];
-
-    self.xMagnetometerLabel.text = [NSString stringWithFormat:@"%f", self.model.xMagnetometerValue];
-    self.yMagnetometerLabel.text = [NSString stringWithFormat:@"%f", self.model.yMagnetometerValue];
-    self.zMagnetometerLabel.text = [NSString stringWithFormat:@"%f", self.model.zMagnetometerValue];
-    
+    STDataPointModel *dataPoint = [self.motionMagic senseDataPoint];
+    [self.model recordDataPoint:dataPoint];
+    [self updateViewWithDataPoint:dataPoint];
 }
 
 #pragma mark - Event Handlers
@@ -128,7 +137,7 @@
         self.isRecording = YES;
         [self.motionMagic startSensing];
     }
-    
+
 }
 - (IBAction)handleSendDataButtonPress:(id)sender
 {

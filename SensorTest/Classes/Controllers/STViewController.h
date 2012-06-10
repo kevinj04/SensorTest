@@ -3,11 +3,10 @@
 //  SensorTest
 //
 //  Created by Kevin Jenkins on 5/23/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 somethingpointless. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "STMotionMagic.h"
 
 @interface STViewController : UIViewController
 
@@ -25,9 +24,6 @@
 
 @property (strong, retain) IBOutlet UIButton *recordButton;
 @property (strong, retain) IBOutlet UIButton *sendDataButton;
-
-@property (strong, retain) STMotionMagic *motionMagic;
-@property (strong, retain) STDataPointModel *model;
 
 - (IBAction)handleRecordButtonPress:(id)sender;
 - (IBAction)handleSendDataButtonPress:(id)sender;

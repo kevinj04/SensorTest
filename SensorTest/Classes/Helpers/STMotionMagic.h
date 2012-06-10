@@ -3,7 +3,7 @@
 //  SensorTest
 //
 //  Created by Kevin Jenkins on 5/23/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 somethingpointless. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -14,7 +14,7 @@
 
 @property (strong, retain) CMMotionManager *motionManager;
 
-- (void) updateModel:(STDataPointModel *) model;
+- (STDataPointModel *) senseDataPoint;
 
 - (void) startSensing;
 - (void) stopSensing;

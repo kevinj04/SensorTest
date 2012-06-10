@@ -3,7 +3,7 @@
 //  SensorTest
 //
 //  Created by Kevin Jenkins on 5/23/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 somethingpointless. All rights reserved.
 //
 
 #import "STMotionMagic.h"
@@ -28,8 +28,9 @@
     self.motionManager = [[CMMotionManager alloc] init];
 }
 
-- (void) updateModel:(STDataPointModel *) model
+- (STDataPointModel *) senseDataPoint
 {
+    STDataPointModel *model = [STDataPointModel new];
 
     model.xAccelerometerValue = self.motionManager.accelerometerData.acceleration.x;
     model.yAccelerometerValue = self.motionManager.accelerometerData.acceleration.y;
@@ -46,6 +47,7 @@
     // should have time stamp for each, poll once too, not sequential access.
     model.timePoint = self.motionManager.accelerometerData.timestamp;
 
+    return model;
 }
 
 - (void) startSensing
