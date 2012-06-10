@@ -11,6 +11,7 @@
 @interface STViewController ()
 
 @property (strong, retain) NSTimer *timer;
+@property (nonatomic, assign) BOOL isRecording;
 
 @end
 
@@ -28,10 +29,14 @@
 @synthesize yMagnetometerLabel = _yMagnetometerLabel;
 @synthesize zMagnetometerLabel = _zMagnetometerLabel;
 
+@synthesize recordButton = _recordButton;
+@synthesize sendDataButton = _sendDataButton;
+
 @synthesize motionMagic = _motionMagic;
 @synthesize model = _model;
 
 @synthesize timer = _timer;
+@synthesize isRecording = _isRecording;
 
 - (void) setupMotionMagic
 {
@@ -44,11 +49,15 @@
     self.model = [[STModel alloc] init];
 }
 
+- (void)setupViewState
+{
+    self.isRecording = NO;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-
+    [self setupViewState];
     [self setupMotionMagic];
     [self setupModel];
 }
@@ -71,8 +80,6 @@
 
 - (void) viewWillAppear:(BOOL)animated {
 
-    [self.motionMagic startSensing];
-
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self
                                                 selector:@selector(update:) userInfo:nil repeats:YES];
 
@@ -81,7 +88,7 @@
 
 - (void) viewWillDisappear:(BOOL)animated {
 
-    [self.motionMagic stopSensing];
+
     [super viewWillDisappear:animated];
     [self.timer invalidate];
     self.timer = nil;
@@ -102,6 +109,36 @@
     self.xMagnetometerLabel.text = [NSString stringWithFormat:@"%f", self.model.xMagnetometerValue];
     self.yMagnetometerLabel.text = [NSString stringWithFormat:@"%f", self.model.yMagnetometerValue];
     self.zMagnetometerLabel.text = [NSString stringWithFormat:@"%f", self.model.zMagnetometerValue];
+    
+}
+
+#pragma mark - Event Handlers
+- (IBAction)handleRecordButtonPress:(id)sender
+{
+    if (self.isRecording) {
+        [self.recordButton setTitle:[NSString stringWithString:@"Record"] forState:UIControlStateNormal];
+        [self.sendDataButton setEnabled:YES];
+        [self.motionMagic stopSensing];
+        self.isRecording = NO;
+    } else {
+        // TODO: [self.model reset];
+        [self.recordButton setTitle:[NSString stringWithString:@"Stop Recording"] forState:UIControlStateNormal];
+        [self.sendDataButton setEnabled:NO];
+        [self setupModel]; // new model
+        self.isRecording = YES;
+        [self.motionMagic startSensing];
+    }
+    
+}
+- (IBAction)handleSendDataButtonPress:(id)sender
+{
+    if (!self.isRecording && self.motionMagic != nil)
+    {
+        // transmit data somewhere somehow!
+        NSLog(@"%@", self.model);
+        self.model = nil;
+        [self.sendDataButton setEnabled:NO];
+    }
 }
 
 @end

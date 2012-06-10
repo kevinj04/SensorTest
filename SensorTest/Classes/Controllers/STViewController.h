@@ -23,7 +23,13 @@
 @property (strong, retain) IBOutlet UILabel *yMagnetometerLabel;
 @property (strong, retain) IBOutlet UILabel *zMagnetometerLabel;
 
+@property (strong, retain) IBOutlet UIButton *recordButton;
+@property (strong, retain) IBOutlet UIButton *sendDataButton;
+
 @property (strong, retain) STMotionMagic *motionMagic;
 @property (strong, retain) STModel *model;
+
+- (IBAction)handleRecordButtonPress:(id)sender;
+- (IBAction)handleSendDataButtonPress:(id)sender;
 
 @end

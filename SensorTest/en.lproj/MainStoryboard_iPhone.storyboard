@@ -106,10 +106,45 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="Aka-JO-e9R">
+                                <rect key="frame" x="20" y="296" width="280" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleRecordButtonPress:" destination="2" eventType="touchUpInside" id="wkO-GU-35V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jVY-fl-dKn">
+                                <rect key="frame" x="20" y="403" width="280" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Send Data">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.83243243243243237" green="0.83243243243243237" blue="0.83243243243243237" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleSendDataButtonPress:" destination="2" eventType="touchUpInside" id="Wkh-t6-TXA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="recordButton" destination="Aka-JO-e9R" id="WR8-Q1-UtP"/>
+                        <outlet property="sendDataButton" destination="jVY-fl-dKn" id="3TQ-UM-3bw"/>
                         <outlet property="xAccelerometerLabel" destination="bxw-Ng-gkT" id="HWM-eN-Ypg"/>
                         <outlet property="xGyroscopeLabel" destination="C5v-jF-SrB" id="mMN-GM-7CA"/>
                         <outlet property="xMagnetometerLabel" destination="JQR-5z-cSg" id="7kO-U4-HaP"/>
@@ -128,6 +163,10 @@
         <class className="STViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STViewController.h"/>
             <relationships>
+                <relationship kind="action" name="handleRecordButtonPress:"/>
+                <relationship kind="action" name="handleSendDataButtonPress:"/>
+                <relationship kind="outlet" name="recordButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="sendDataButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="xAccelerometerLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="xGyroscopeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="xMagnetometerLabel" candidateClass="UILabel"/>
