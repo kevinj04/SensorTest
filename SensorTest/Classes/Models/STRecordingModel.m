@@ -34,4 +34,41 @@
     [self.dataPoints addObject:newPoint];
 }
 
+- (NSString *) stringDataForAccelerometer
+{
+    NSMutableString *string = [NSMutableString string];
+
+    if (self.dataPoints.count <= 0) return string;
+
+    for (STDataPointModel *dataPoint in self.dataPoints)
+    {
+        [string appendFormat:@"%f %f %f %f\n", dataPoint.timePoint, dataPoint.xAccelerometerValue, dataPoint.yAccelerometerValue, dataPoint.zAccelerometerValue];
+    }
+    return string;
+}
+- (NSString *) stringDataForGyroscope
+{
+    NSMutableString *string = [NSMutableString string];
+
+    if (self.dataPoints.count <= 0) return string;
+
+    for (STDataPointModel *dataPoint in self.dataPoints)
+    {
+        [string appendFormat:@"%f %f %f %f\n", dataPoint.timePoint, dataPoint.xGyroscopeValue,
+         dataPoint.yGyroscopeValue, dataPoint.zGyroscopeValue];
+    }
+    return string;
+}
+- (NSString *) stringDataForMagnetometer
+{
+    NSMutableString *string = [NSMutableString string];
+
+    if (self.dataPoints.count <= 0) return string;
+
+    for (STDataPointModel *dataPoint in self.dataPoints)
+    {
+        [string appendFormat:@"%f %f %f %f\n", dataPoint.timePoint, dataPoint.xAccelerometerValue, dataPoint.yAccelerometerValue, dataPoint.zAccelerometerValue];
+    }
+    return string;
+}
 @end

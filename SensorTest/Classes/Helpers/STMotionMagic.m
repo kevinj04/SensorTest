@@ -8,15 +8,26 @@
 
 #import "STMotionMagic.h"
 
+@interface STMotionMagic ()
+
+@property (nonatomic, assign) double lastTimeStamp;
+@property (nonatomic, assign) double cumulativeTime;
+
+@end
+
 @implementation STMotionMagic
 
 @synthesize motionManager = _motionManager;
+@synthesize lastTimeStamp = _lastTimeStamp;
+@synthesize cumulativeTime = _cumulativeTime;
 
 - (id) init
 {
 
     self = [super init];
 
+    self.lastTimeStamp = 0.0;
+    self.cumulativeTime = 0.0;
     [self setupMotionManager];
 
     return self;
@@ -45,7 +56,22 @@
     model.zMagnetometerValue = self.motionManager.magnetometerData.magneticField.z;
 
     // should have time stamp for each, poll once too, not sequential access.
-    model.timePoint = self.motionManager.accelerometerData.timestamp;
+
+    double measurementTimeStamp = self.motionManager.accelerometerData.timestamp;
+    double deltaTime = 0.0;
+
+    if (self.lastTimeStamp != 0.0)
+    {
+        deltaTime =  measurementTimeStamp - self.lastTimeStamp;
+        if (deltaTime == 0.0) return nil;
+    } else {
+        deltaTime = 0.0;
+    }
+
+    self.cumulativeTime += deltaTime;
+    self.lastTimeStamp = measurementTimeStamp;
+
+    model.timePoint = self.cumulativeTime;
 
     return model;
 }

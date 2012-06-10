@@ -116,9 +116,15 @@
 
 - (void) update:(double) dt
 {
-    STDataPointModel *dataPoint = [self.motionMagic senseDataPoint];
-    [self.model recordDataPoint:dataPoint];
-    [self updateViewWithDataPoint:dataPoint];
+    if (self.isRecording)
+    {
+        STDataPointModel *dataPoint = [self.motionMagic senseDataPoint];
+        if (dataPoint)
+        {
+            [self.model recordDataPoint:dataPoint];
+            [self updateViewWithDataPoint:dataPoint];
+        }
+    }
 }
 
 #pragma mark - Event Handlers
@@ -144,7 +150,7 @@
     if (!self.isRecording && self.motionMagic != nil)
     {
         // transmit data somewhere somehow!
-        NSLog(@"%@", self.model);
+        NSLog(@"%@", self.model.stringDataForAccelerometer);
         self.model = nil;
         [self.sendDataButton setEnabled:NO];
     }

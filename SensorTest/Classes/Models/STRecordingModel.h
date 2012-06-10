@@ -16,4 +16,8 @@
 - (STDataPointModel *) lastDataPoint;
 - (void) recordDataPoint:(STDataPointModel *) newPoint;
 
+- (NSString *) stringDataForAccelerometer;
+- (NSString *) stringDataForGyroscope;
+- (NSString *) stringDataForMagnetometer;
+
 @end
