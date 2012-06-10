@@ -145,14 +145,44 @@
     }
 
 }
+- (NSString *) createResultsBody
+{
+    return [NSString stringWithFormat:@"Accelerometer Data: \n \n %@ \n \n \n \n Gyroscope Data: \n \n %@", self.model.stringDataForAccelerometer, self.model.stringDataForGyroscope];
+}
+- (void) emailData
+{
+    MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
+    controller.mailComposeDelegate = self;
+
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterShortStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+
+    [controller setSubject:[NSString stringWithFormat:@"SensorTest Data %@", [formatter stringFromDate:[NSDate date]]]];
+    [controller setMessageBody:[self createResultsBody] isHTML:NO];
+    [self presentModalViewController:controller animated:YES];
+}
 - (IBAction)handleSendDataButtonPress:(id)sender
 {
     if (!self.isRecording && self.motionMagic != nil)
     {
-        // transmit data somewhere somehow!
-        NSLog(@"%@", self.model.stringDataForAccelerometer);
-        self.model = nil;
-        [self.sendDataButton setEnabled:NO];
+        [self emailData];
+    }
+}
+
+#pragma mark - MFMailComposeViewControllerDelegate
+/* Dismisses the email composition interface when users tap Cancel or Send. Proceeds to update the message field with the result of the operation. */
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissModalViewControllerAnimated:YES];
+    switch (result) {
+        case MFMailComposeResultSent:
+            self.model = nil;
+            [self.sendDataButton setEnabled:NO];
+            break;
+
+        default:
+            break;
     }
 }
 

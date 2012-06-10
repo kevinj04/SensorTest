@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface STViewController : UIViewController
+@interface STViewController : UIViewController<MFMailComposeViewControllerDelegate>
 
 @property (strong, retain) IBOutlet UILabel *xAccelerometerLabel;
 @property (strong, retain) IBOutlet UILabel *yAccelerometerLabel;
