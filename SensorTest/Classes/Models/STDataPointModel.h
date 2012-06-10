@@ -1,5 +1,5 @@
 //
-//  STModel.h
+//  STDataPointModel.h
 //  SensorTest
 //
 //  Created by Kevin Jenkins on 5/23/12.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface STModel : NSObject
+@interface STDataPointModel : NSObject
 
 @property (nonatomic, assign) double xAccelerometerValue;
 @property (nonatomic, assign) double yAccelerometerValue;

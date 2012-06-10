@@ -28,7 +28,7 @@
     self.motionManager = [[CMMotionManager alloc] init];
 }
 
-- (void) updateModel:(STModel *) model
+- (void) updateModel:(STDataPointModel *) model
 {
 
     model.xAccelerometerValue = self.motionManager.accelerometerData.acceleration.x;

@@ -27,7 +27,7 @@
 @property (strong, retain) IBOutlet UIButton *sendDataButton;
 
 @property (strong, retain) STMotionMagic *motionMagic;
-@property (strong, retain) STModel *model;
+@property (strong, retain) STDataPointModel *model;
 
 - (IBAction)handleRecordButtonPress:(id)sender;
 - (IBAction)handleSendDataButtonPress:(id)sender;

@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreMotion/CoreMotion.h>
-#import "STModel.h"
+#import "STDataPointModel.h"
 
 @interface STMotionMagic : NSObject
 
 @property (strong, retain) CMMotionManager *motionManager;
 
-- (void) updateModel:(STModel *) model;
+- (void) updateModel:(STDataPointModel *) model;
 
 - (void) startSensing;
 - (void) stopSensing;

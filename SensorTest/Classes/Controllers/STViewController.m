@@ -46,7 +46,7 @@
 
 - (void) setupModel
 {
-    self.model = [[STModel alloc] init];
+    self.model = [[STDataPointModel alloc] init];
 }
 
 - (void)setupViewState

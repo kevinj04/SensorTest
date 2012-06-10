@@ -1,14 +1,14 @@
 //
-//  STModel.m
+//  STDataPointModel.m
 //  SensorTest
 //
 //  Created by Kevin Jenkins on 5/23/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "STModel.h"
+#import "STDataPointModel.h"
 
-@implementation STModel
+@implementation STDataPointModel
 
 @synthesize xAccelerometerValue = _xAccelerometerValue;
 @synthesize yAccelerometerValue = _yAccelerometerValue;
